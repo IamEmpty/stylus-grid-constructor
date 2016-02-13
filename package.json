@@ -1,0 +1,25 @@
+{
+  "name": "stylus-grid-constructor",
+  "version": "1.0.0",
+  "description": "CSS grid constructor, written in stylus",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IamEmpty/stylus-grid-constructor.git"
+  },
+  "keywords": [
+    "stylus"
+  ],
+  "author": "IamEmpty",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IamEmpty/stylus-grid-constructor/issues"
+  },
+  "homepage": "https://github.com/IamEmpty/stylus-grid-constructor#readme"
+}
