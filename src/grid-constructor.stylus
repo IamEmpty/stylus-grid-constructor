@@ -1,29 +1,8 @@
-.container
-  width 1170px
-  padding-right 15px
-  padding-left 15px
-  margin 0 auto
-  &:before,
-  &:after
-    display table
-    content " "
-    clear both
-
-.row
-  margin-right -15px
-  margin-left -15px
-  &:before,
-  &:after
-    display table
-    content " "
-    clear both
-
-
-grid-constructor($amount, $prefix, $padding)
+grid-constructor($amount, $suffix, $padding)
   $list = ''
 
   for $num in (1..$amount)
-    .{$prefix}-{$num}
+    .{$suffix}-{$num}
       width (100% / $amount * $num)
     $list = $list + ', ' + $prefix + '-' + $num
 
@@ -34,3 +13,12 @@ grid-constructor($amount, $prefix, $padding)
     min-height 1px
     float left
     box-sizing border-box
+
+  .row
+    margin-right -$padding
+    margin-left -$padding
+    &:before,
+    &:after
+      display table
+      content " "
+      clear both
