@@ -7,7 +7,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "build": "stylus -w test/grid.styl -m -o build",
+    "dist": "stylus src/grid.styl -s -o dist/grid.css"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/IamEmpty/stylus-grid-constructor/issues"
   },
-  "homepage": "https://github.com/IamEmpty/stylus-grid-constructor#readme"
+  "homepage": "https://github.com/IamEmpty/stylus-grid-constructor#readme",
+  "devDependencies": {
+    "jade": "^1.11.0",
+    "stylus": "^0.53.0"
+  }
 }
