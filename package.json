@@ -1,6 +1,6 @@
 {
   "name": "stylus-grid-constructor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CSS grid constructor, written in stylus",
   "main": "index.js",
   "directories": {
@@ -8,8 +8,9 @@
   },
   "scripts": {
     "test": "npm test",
-    "build": "stylus -w test/grid.styl -m -o build",
-    "dist": "stylus src/grid.styl -s -o dist/grid.css"
+    "build": "mkdir -p build && stylus -w test/grid.styl -m -o build",
+    "dist": "stylus src/grid.styl -s -o dist/grid.css",
+    "clean": "rm -rf build node_modules"
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,7 @@
   },
   "homepage": "https://github.com/IamEmpty/stylus-grid-constructor#readme",
   "devDependencies": {
-    "jade": "^1.11.0",
-    "stylus": "^0.53.0"
+    "pug": "^2.0.0-alpha4",
+    "stylus": "^0.54.2"
   }
 }

@@ -1,32 +1,12 @@
-// join(delim, args)
-//   buf = ''
-//   for arg, index in args
-//     if index
-//       buf += delim + arg
-//     else
-//       buf += arg
-
-nums = '.co,', '.ro,'
-push(nums, '.be,')
-push(nums, '.rbe,')
-push(nums, '.lbe,')
-
-{selector(nums)}
-  font-size: nums
- // => 1 2 3 4 5
-
-grid-constructor($amount, $suffix, $padding)
-  $list = '.col'
-
-  // join(', ', foo bar baz)
+grid-constructor($amount = 12, $suffix = 'col', $padding = 15px)
 
   for $num in (1..$amount)
     $selector = '.' + $suffix + '-' + $num
     {$selector}
       width (100% / $amount * $num)
-    push($list, $selector)
+    $list = join(', ', $list, $selector)
 
-  {selector($list)}
+  {$list}
     padding-right $padding
     padding-left $padding
     position relative
