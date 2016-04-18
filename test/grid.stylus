@@ -1,3 +1,0 @@
-import '../src/grid-constructor'
-
-grid-constructor(12, 'col-md', 15px)
