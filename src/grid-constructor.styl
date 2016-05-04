@@ -2,8 +2,8 @@
 
 grid-constructor(
   $amount = $default-amount,
-  $suffix = $default-suffix,
   $padding = $default-padding,
+  $suffixes = $default-suffixes,
   $breakpoints = $default-breakpoints)
 
   $breakpoints-length = length($breakpoints) + 1
@@ -12,7 +12,7 @@ grid-constructor(
 
     if $i == 1
       for $j in (1..$amount)
-        $selector = '.' + $suffix + '-' + $j
+        $selector = '.' + $suffixes[$i - 1] + '-' + $j
         {$selector}
           width (100% / $amount * $j)
         $list = join(', ', $list, $selector)
@@ -26,7 +26,7 @@ grid-constructor(
     else
       @media screen and (min-width: $breakpoints[$i - 2])
         for $j in (1..$amount)
-          $selector = '.' + $suffix + '-' + $j
+          $selector = '.' + $suffixes[$i - 1] + '-' + $j
           {$selector}
             width (100% / $amount * $j)
           $list = join(', ', $list, $selector)
