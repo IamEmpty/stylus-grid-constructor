@@ -11,3 +11,7 @@ bower install stylus-grid-constructor --save
 ```
 npm run build
 ```
+or
+```
+npm run watch
+```
