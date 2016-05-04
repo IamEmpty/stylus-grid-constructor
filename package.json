@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "npm test",
-    "build": "mkdir -p build && stylus -w test/grid.styl -m -o build",
+    "build": "mkdir -p build && stylus test/grid.styl -m -o build",
+    "watch": "mkdir -p build && stylus -w test/grid.styl -m -o build",
     "dist": "stylus src/grid.styl -s -o dist/grid.css",
     "clean": "rm -rf build node_modules"
   },
@@ -17,7 +18,8 @@
     "url": "git+https://github.com/IamEmpty/stylus-grid-constructor.git"
   },
   "keywords": [
-    "stylus"
+    "stylus",
+    "grid"
   ],
   "author": "IamEmpty",
   "license": "MIT",

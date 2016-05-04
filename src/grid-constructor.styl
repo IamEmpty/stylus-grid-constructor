@@ -3,19 +3,19 @@
 grid-constructor(
   $amount = $default-amount,
   $suffix = $default-suffix,
-  $padding = $default-padding)
+  $padding = $default-padding,
+  $breakpoints = $default-breakpoints)
 
-  width-list = 100px, 200px, 300px, 400px, 500px
-  width-list-length = length(width-list)
+  $breakpoints-length = length($breakpoints) + 1
 
-  for $i in (1..width-list-length)
-    @media screen and (min-width: width-list[$i - 1])
+  for $i in (1..$breakpoints-length)
+
+    if $i == 1
       for $j in (1..$amount)
         $selector = '.' + $suffix + '-' + $j
         {$selector}
           width (100% / $amount * $j)
         $list = join(', ', $list, $selector)
-
       {$list}
         padding-right $padding
         padding-left $padding
@@ -23,6 +23,20 @@ grid-constructor(
         min-height 1px
         float left
         box-sizing border-box
+    else
+      @media screen and (min-width: $breakpoints[$i - 2])
+        for $j in (1..$amount)
+          $selector = '.' + $suffix + '-' + $j
+          {$selector}
+            width (100% / $amount * $j)
+          $list = join(', ', $list, $selector)
+        {$list}
+          padding-right $padding
+          padding-left $padding
+          position relative
+          min-height 1px
+          float left
+          box-sizing border-box
 
   .row
     margin-right -($padding)
