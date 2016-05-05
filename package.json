@@ -11,7 +11,8 @@
     "build": "mkdir -p build && stylus test/grid.styl -m -o build",
     "watch": "mkdir -p build && stylus -w test/grid.styl -m -o build",
     "dist": "stylus src/grid.styl -s -o dist/grid.css",
-    "clean": "rm -rf build node_modules"
+    "clean": "rm -rf build",
+    "clean-all": "rm -rf build node_modules"
   },
   "repository": {
     "type": "git",

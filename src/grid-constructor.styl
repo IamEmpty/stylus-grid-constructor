@@ -8,35 +8,27 @@ grid-constructor(
 
   $breakpoints-length = length($breakpoints) + 1
 
+  columns-for-breakpoint()
+    for $j in (1..$amount)
+      $selector = '.' + $suffixes[$i - 1] + '-' + $j
+      {$selector}
+        width (100% / $amount * $j)
+      $list = join(', ', $list, $selector)
+    {$list}
+      padding-right $padding
+      padding-left $padding
+      position relative
+      min-height 1px
+      float left
+      box-sizing border-box
+
   for $i in (1..$breakpoints-length)
 
     if $i == 1
-      for $j in (1..$amount)
-        $selector = '.' + $suffixes[$i - 1] + '-' + $j
-        {$selector}
-          width (100% / $amount * $j)
-        $list = join(', ', $list, $selector)
-      {$list}
-        padding-right $padding
-        padding-left $padding
-        position relative
-        min-height 1px
-        float left
-        box-sizing border-box
+      columns-for-breakpoint()
     else
       @media screen and (min-width: $breakpoints[$i - 2])
-        for $j in (1..$amount)
-          $selector = '.' + $suffixes[$i - 1] + '-' + $j
-          {$selector}
-            width (100% / $amount * $j)
-          $list = join(', ', $list, $selector)
-        {$list}
-          padding-right $padding
-          padding-left $padding
-          position relative
-          min-height 1px
-          float left
-          box-sizing border-box
+        columns-for-breakpoint()
 
   .row
     margin-right -($padding)
