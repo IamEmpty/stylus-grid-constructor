@@ -1,6 +1,6 @@
 {
   "name": "stylus-grid-constructor",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "CSS grid constructor, written in stylus",
   "main": "index.js",
   "directories": {
