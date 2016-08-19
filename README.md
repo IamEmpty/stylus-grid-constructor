@@ -13,7 +13,14 @@ or
 ```stylus
 grid-constructor(12, 15px)
 ```
-or
+default settings
+```stylus
+$default-amount = 12
+$default-padding = 15px
+$default-suffixes = 'col-xs', 'col-sm', 'col-md', 'col-lg', 'col-xl'
+$default-breakpoints = 544px, 768px, 992px, 1200px
+```
+or your own settings
 ```stylus
 $my-suffixes = 'col-xs', 'col-sm', 'col-md', 'col-lg', 'col-xl'
 $my-breakpoints = 544px, 768px, 992px, 1200px
