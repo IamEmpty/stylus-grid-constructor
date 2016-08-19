@@ -15,10 +15,10 @@ grid-constructor(12, 15px)
 ```
 default settings
 ```stylus
-$default-amount = 12
-$default-padding = 15px
-$default-suffixes = 'col-xs', 'col-sm', 'col-md', 'col-lg', 'col-xl'
-$default-breakpoints = 544px, 768px, 992px, 1200px
+$default-amount = 12 // Amount of columns
+$default-padding = 15px // Padding between columns
+$default-suffixes = 'col-xs', 'col-sm', 'col-md', 'col-lg', 'col-xl' // List of prefixes for responsive grid
+$default-breakpoints = 544px, 768px, 992px, 1200px // breakpoints for responsive grids
 ```
 or your own settings
 ```stylus
