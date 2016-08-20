@@ -7,3 +7,6 @@ dist/
 
 # OS X
 .DS_store
+
+# Web Storm
+.idea

@@ -13,7 +13,14 @@ or
 ```stylus
 grid-constructor(12, 15px)
 ```
-or
+default settings
+```stylus
+$default-amount = 12 // Amount of columns
+$default-padding = 15px // Padding between columns
+$default-suffixes = 'col-xs', 'col-sm', 'col-md', 'col-lg', 'col-xl' // List of prefixes for responsive grid
+$default-breakpoints = 544px, 768px, 992px, 1200px // breakpoints for responsive grids
+```
+or your own settings
 ```stylus
 $my-suffixes = 'col-xs', 'col-sm', 'col-md', 'col-lg', 'col-xl'
 $my-breakpoints = 544px, 768px, 992px, 1200px
