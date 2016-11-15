@@ -1,17 +1,18 @@
 # Stylus grid constructor
-CSS grid constructor, written in stylus
+CSS grid constructor, written in stylus. Has two versions - flex and float.
+Inspired by Bootstrap grid.
 
 ## Using
 ```
 bower install stylus-grid-constructor --save
 ```
-after that add src/grid-constructor.styl in your project and call something like this
+after that add ```src/grid-flex.styl``` or ```src/grid.styl``` to your project and call something like this
 ```stylus
-grid-constructor(12)
+grid(12)
 ```
 or
 ```stylus
-grid-constructor(12, 15px)
+grid-flex(12, 15px)
 ```
 default settings
 ```stylus
@@ -24,12 +25,13 @@ or your own settings
 ```stylus
 $my-suffixes = 'col-xs', 'col-sm', 'col-md', 'col-lg', 'col-xl'
 $my-breakpoints = 544px, 768px, 992px, 1200px
-grid-constructor(12, 15px, $my-suffixes, $my-breakpoints)
+grid-flex(12, 15px, $my-suffixes, $my-breakpoints)
 ```
 
 ## Contributing
 
 ```
+npm i
 npm run build
 ```
 or

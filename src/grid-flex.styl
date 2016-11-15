@@ -1,0 +1,51 @@
+@require 'config'
+
+grid-flex(
+  $amount = $default-amount,
+  $padding = $default-padding,
+  $suffixes = $default-suffixes,
+  $breakpoints = $default-breakpoints)
+
+  $breakpoints-length = length($breakpoints) + 1
+
+  column()
+    $selector = '.' + $suffixes[$i - 1]
+    {$selector}
+      flex-basis 0
+      flex-grow 1
+      max-width 100%
+
+  columns-for-breakpoint()
+    for $j in (1..$amount)
+      $selector = '.' + $suffixes[$i - 1] + '-' + $j
+      $percent = 100% / $amount * $j
+      {$selector}
+        flex 0 0 $percent
+        max-width $percent
+      $list = join(', ', $list, $selector)
+    {$list}
+      padding-right $padding
+      padding-left $padding
+      box-sizing border-box
+      position relative
+      min-height 1px
+      width 100%
+
+  for $i in (1..$breakpoints-length)
+
+    if $i == 1
+      column()
+      columns-for-breakpoint()
+    else
+      @media screen and (min-width: $breakpoints[$i - 2])
+        column()
+        columns-for-breakpoint()
+
+  .row
+    margin-right -($padding)
+    margin-left -($padding)
+    display flex
+    flex-wrap wrap
+
+  .container
+    padding  0 $padding
