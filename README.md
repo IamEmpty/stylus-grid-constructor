@@ -32,9 +32,9 @@ grid-flex(12, 15px, $my-suffixes, $my-breakpoints)
 
 ```
 npm i
-npm run build
+gulp build
 ```
 or
 ```
-npm run watch
+gulp dev
 ```
