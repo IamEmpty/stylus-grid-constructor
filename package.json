@@ -1,35 +1,39 @@
 {
   "name": "stylus-grid-constructor",
-  "version": "1.2.1",
+  "version": "2.0.1",
   "description": "CSS grid constructor, written in stylus",
-  "main": "index.js",
+  "main": "src/grid-flex.styl",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "npm test",
-    "build": "mkdir -p build && stylus test/grid.styl -m -o build",
-    "watch": "mkdir -p build && stylus -w test/grid.styl -m -o build",
-    "dist": "stylus src/grid.styl -s -o dist/grid.css",
+    "build": "gulp build",
+    "watch": "gulp dev",
     "clean": "rm -rf build",
     "clean-all": "rm -rf build node_modules"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IamEmpty/stylus-grid-constructor.git"
+    "url": "git+https://github.com/pure-js/stylus-grid-constructor.git"
   },
   "keywords": [
     "stylus",
-    "grid"
+    "grid",
+    "flex grid",
+    "flexbox"
   ],
-  "author": "IamEmpty",
+  "author": "pure-js",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/IamEmpty/stylus-grid-constructor/issues"
+    "url": "https://github.com/pure-js/stylus-grid-constructor/issues"
   },
-  "homepage": "https://github.com/IamEmpty/stylus-grid-constructor#readme",
+  "homepage": "https://github.com/pure-js/stylus-grid-constructor#readme",
   "devDependencies": {
-    "pug": "^2.0.0-alpha4",
-    "stylus": "^0.54.2"
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-stylus": "^2.6.0"
   }
 }

@@ -1,18 +1,19 @@
 {
   "name": "stylus-grid-constructor",
-  "version": "1.2.2",
+  "version": "2.0.1",
   "description": "CSS grid constructor, written in stylus",
-  "main": "src/grid-constructor.styl",
+  "main": "src/grid-flex.styl",
   "authors": [
-    "IamEmpty"
+    "pure-js"
   ],
   "license": "MIT",
   "keywords": [
     "stylus",
-    "grid"
+    "grid",
+    "flex grid",
+    "flexbox"
   ],
-  "homepage": "https://github.com/IamEmpty/stylus-grid-constructor",
-  "moduleType": [],
+  "homepage": "https://github.com/pure-js/stylus-grid-constructor",
   "ignore": [
     "**/.*",
     "node_modules",
