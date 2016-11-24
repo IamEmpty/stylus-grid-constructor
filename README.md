@@ -4,7 +4,7 @@ Inspired by Bootstrap grid.
 
 ## Using
 ```
-bower install stylus-grid-constructor --save
+bower i stylus-grid-constructor --save
 ```
 after that add ```src/grid-flex.styl``` or ```src/grid.styl``` to your project and call something like this
 ```stylus
@@ -20,6 +20,7 @@ $default-amount = 12 // Amount of columns
 $default-padding = 15px // Padding between columns
 $default-suffixes = 'col-xs', 'col-sm', 'col-md', 'col-lg', 'col-xl' // List of prefixes for responsive grid
 $default-breakpoints = 544px, 768px, 992px, 1200px // breakpoints for responsive grids
+$default-row-postfix = '' // prefix for row
 ```
 or your own settings
 ```stylus

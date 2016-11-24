@@ -1,6 +1,6 @@
 {
   "name": "stylus-grid-constructor",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "CSS grid constructor, written in stylus",
   "main": "src/grid-flex.styl",
   "directories": {
@@ -9,9 +9,7 @@
   "scripts": {
     "test": "npm test",
     "build": "gulp build",
-    "watch": "gulp dev",
-    "clean": "rm -rf build",
-    "clean-all": "rm -rf build node_modules"
+    "watch": "gulp dev"
   },
   "repository": {
     "type": "git",
@@ -30,7 +28,8 @@
   },
   "homepage": "https://github.com/pure-js/stylus-grid-constructor#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "del": "^2.2.2",
+    "gulp": "gulpjs/gulp.git#4.0",
     "gulp-load-plugins": "^1.4.0",
     "gulp-plumber": "^1.1.0",
     "gulp-sourcemaps": "^2.2.0",

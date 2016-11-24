@@ -1,4 +1,5 @@
 const gulp = require('gulp'),
+  del = require('del'),
   plugins = require('gulp-load-plugins')();
 
 const paths = {
@@ -7,19 +8,25 @@ const paths = {
   build: 'build/'
 };
 
-function getTask(task) {
-  return require('./gulp-tasks/' + task)(gulp, plugins, paths);
+const clean = () => del([ 'build/' ]);
+const cleanAll = () => del([ 'build/', 'node_modules/' ]);
+
+function task(name) {
+  return require('./gulp-tasks/' + name)(gulp, plugins, paths);
 }
 
-// Get one .less file and render
-gulp.task('css', getTask('css'));
+exports.clean = clean;
+exports.cleanAll = cleanAll;
 
 // Rerun the task when a file changes
-gulp.task('watch', function() {
-  gulp.watch(paths.stylusWatch, ['css']);
-});
+function watch() {
+  gulp.watch(paths.stylusWatch, task('css'));
+}
+
+gulp.task('build', task('css'));
+
+const dev = gulp.parallel(task('css'), watch);
+gulp.task('dev', dev);
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('build', ['css']);
-gulp.task('dev', ['build', 'watch']);
-gulp.task('default', ['dev']);
+gulp.task('default', dev);
