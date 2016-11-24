@@ -4,7 +4,8 @@ grid(
   $amount = $default-amount,
   $padding = $default-padding,
   $suffixes = $default-suffixes,
-  $breakpoints = $default-breakpoints)
+  $breakpoints = $default-breakpoints,
+  $row-postfix = $default-row-postfix)
 
   $breakpoints-length = length($breakpoints) + 1
 
@@ -30,7 +31,8 @@ grid(
       @media screen and (min-width: $breakpoints[$i - 2])
         columns-for-breakpoint()
 
-  .row
+  $row = '.row' + $row-postfix
+  {$row}
     margin-right -($padding)
     margin-left -($padding)
     &:before,
@@ -38,6 +40,3 @@ grid(
       display table
       content " "
       clear both
-
-  .container
-    padding  0 $padding

@@ -4,7 +4,8 @@ grid-flex(
   $amount = $default-amount,
   $padding = $default-padding,
   $suffixes = $default-suffixes,
-  $breakpoints = $default-breakpoints)
+  $breakpoints = $default-breakpoints,
+  $row-postfix = $default-row-postfix)
 
   $breakpoints-length = length($breakpoints) + 1
 
@@ -41,11 +42,9 @@ grid-flex(
         column()
         columns-for-breakpoint()
 
-  .row
+  $row = '.row' + $row-postfix
+  {$row}
     margin-right -($padding)
     margin-left -($padding)
     display flex
     flex-wrap wrap
-
-  .container
-    padding  0 $padding
