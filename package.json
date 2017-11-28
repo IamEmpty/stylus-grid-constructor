@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/pure-js/stylus-grid-constructor#readme",
   "devDependencies": {
-    "del": "^2.2.2",
+    "del": "~3.0.0",
     "gulp": "gulpjs/gulp.git#4.0",
     "gulp-load-plugins": "^1.4.0",
     "gulp-plumber": "^1.1.0",
