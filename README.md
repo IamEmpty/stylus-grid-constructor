@@ -3,8 +3,8 @@ CSS grid constructor, written in stylus. Has two versions - flex and float.
 Inspired by Bootstrap grid.
 
 ## Using
-```
-bower i stylus-grid-constructor --save
+```bash
+npm i stylus-grid-constructor
 ```
 after that add ```src/grid-flex.styl``` or ```src/grid.styl``` to your project and call something like this
 ```stylus
@@ -31,7 +31,7 @@ grid-flex(12, 15px, $my-suffixes, $my-breakpoints)
 
 ## Contributing
 
-```
+```bash
 npm i
 npm start
 ```
