@@ -4,4 +4,4 @@ module.exports = (gulp, plugins, paths) => () =>
     .pipe(plugins.sourcemaps.init())
     .pipe(plugins.stylus())
     .pipe(plugins.sourcemaps.write(''))
-    .pipe(gulp.dest(paths.build))
+    .pipe(gulp.dest(paths.build));
