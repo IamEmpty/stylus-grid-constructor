@@ -1,7 +1,7 @@
 # Stylus grid constructor
 CSS grid constructor, written in stylus. Has two versions - flex and float.
 Inspired by Bootstrap grid.
-> Nowadays we have a CSS Grid supported by almost every browser, but if you need to spprt UC Browser or IE10, this library will be helpful.
+> Nowadays we have a [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement) supported by almost every browser, but if you need to spprt UC Browser or IE10, this library will be helpful.
 ## Using
 ```bash
 npm i stylus-grid-constructor
